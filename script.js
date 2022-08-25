@@ -21,8 +21,30 @@ function encriptar(textoEncriptar){
 
     return textoEncriptar;
 }
-/*
-document.getElementById("texto_modificado").style.display = "none";
-            var texto=document.getElementById("texto_modificado");
-            texto.value="hola";
-            alert(texto);*/
+
+function btnDesencriptar(){
+    const textoDesencriptado = desencriptar(inputTexto.value)
+    mensaje.value = textoDesencriptado;
+    inputTexto.value = "";
+}
+
+function desencriptar(textoDesencriptar){
+    mat = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+
+    textoDesencriptar = textoDesencriptar.toLowerCase();
+
+    for(let i=0;i<mat.length;i++){
+        if(textoDesencriptar.includes(mat[i][1])){
+            textoDesencriptar = textoDesencriptar.replaceAll(mat[i][1],mat[i][0])
+        }
+    }
+
+    return textoDesencriptar;
+}
+
+function copiar(){
+    mensaje.select()
+    navigator.clipboard.writeText(mensaje.value);
+    mensaje.value=""
+    alert("Texto Copiado")
+}

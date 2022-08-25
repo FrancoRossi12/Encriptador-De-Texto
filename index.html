@@ -31,13 +31,13 @@
         </div>
         <div class="botones">
             <button class="boton_encriptar" onclick="btnEncriptar()"><p>Encriptar</p></button>
-            <button class="boton_desencriptar" onabort="btnDesencriptar()"><p>Desencriptar</p></button>
+            <button class="boton_desencriptar" onclick="btnDesencriptar()"><p>Desencriptar</p></button>
         </div>
-        <button class="boton_copiar"><p>Copiar</p></button>
+        <button class="boton_copiar" onclick="copiar()"><p>Copiar</p></button>
         <!--<input type="text" class="ingrese_txt" value="Ingrese texto por aquí">-->
         <textarea class="ingrese_txt" cols="40" rows="6" placeholder="Ingrese el texto aqui"></textarea>
         
-        <textarea class="texto_modificado" id="" cols="30" rows="10"></textarea>
+        <textarea class="texto_modificado" id="texto_modificado" cols="30" rows="10" readonly="true"></textarea>
     </main>
     <script src="script.js"></script>
 </body>
