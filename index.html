@@ -30,11 +30,15 @@
             <p>Solo letras minúsculas y sin acentos</p>
         </div>
         <div class="botones">
-            <button class="boton_encriptar"><p>Encriptar</p></button>
-            <button class="boton_desencriptar"><p>Desencriptar</p></button>
+            <button class="boton_encriptar" onclick="btnEncriptar()"><p>Encriptar</p></button>
+            <button class="boton_desencriptar" onabort="btnDesencriptar()"><p>Desencriptar</p></button>
         </div>
         <button class="boton_copiar"><p>Copiar</p></button>
-        <p class="ingrese_txt">Ingrese texto por aqui</p>
+        <!--<input type="text" class="ingrese_txt" value="Ingrese texto por aquí">-->
+        <textarea class="ingrese_txt" cols="40" rows="6" placeholder="Ingrese el texto aqui"></textarea>
+        
+        <textarea class="texto_modificado" id="" cols="30" rows="10"></textarea>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
